@@ -5,7 +5,7 @@
  *
  * usage: $('.box').sameHeight();
  *
- * Brings all .box-Elements to height of the heighest one. 
+ * Brings all .box-Elements to height of the heighest one.
  * In many grid layouts boxes of the same row should have
  * the same height:
  *
@@ -13,7 +13,7 @@
  *      $(this).find('.box').sameHeight();
  *   })
  *
- * There is an opional callback to hook in, after height 
+ * There is an opional callback to hook in, after height
  * is synchronized. E.g. add some css class:
  *
  *  $('.box').sameHeight(function(elem) {
@@ -27,7 +27,7 @@ $.fn.sameHeight = function(callback) {
         {
             $(this).each(function() {
                 $(this).height('auto');
-                currentHeight = $(this).height();
+                currentHeight = $(this).outerHeight();
                 maxHeight = (currentHeight > maxHeight) ? currentHeight : maxHeight;
             });
 
